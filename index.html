@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熟睡ベンチマーク | ライトハウス</title>
+    <meta name="description" content="あなたの睡眠環境を「科学」で変える。熟睡ベンチマークのサテライトサイトです。">
+
+    <!-- OGP -->
+    <meta property="og:title" content="熟睡ベンチマーク | ライトハウス">
+    <meta property="og:description" content="室温・湿度・住宅性能から睡眠環境を可視化。あなたの「寝苦しさ」の正体を突き止めます。">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="../image/favicon.png">
+    <meta property="og:image" content="https://jukusui-benchmark.com/image/ogp_default.png">
+    <meta property="og:site_name" content="熟睡ベンチマーク">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --sat-accent: #6366f1;
+            --sat-bg: #0f172a;
+        }
+
+        .satellite-hero {
+            padding: 120px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+        }
+
+        .satellite-hero h1 {
+            font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .satellite-hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            color: #6366f1;
+            margin-bottom: 20px;
+            width: 32px;
+            height: 32px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .satellite-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../index.html" class="header-logo">熟睡ベンチマーク</a>
+        </div>
+    </header>
+
+    <div class="light-bg">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <main>
+        <section class="satellite-hero">
+            <div class="app-wrapper">
+                <h1>あなたの寝室を<br>オーバークロックする</h1>
+                <p>「なんとなく寝苦しい」を、科学的な数値で解き明かす。<br>最新の睡眠工学に基づいたシミュレーションツール。</p>
+                <div class="cta-group">
+                    <a href="../index.html" class="btn-primary">
+                        今すぐ診断を始める <i data-lucide="zap"></i>
+                    </a>
+                    <a href="../thermal/index.html" class="btn-secondary">
+                        知識を深める <i data-lucide="book-open"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-grid">
+            <div class="feature-card">
+                <i data-lucide="thermometer"></i>
+                <h3>精密な環境シミュレート</h3>
+                <p>室温、湿度、住宅の断熱性能。複雑に絡み合う要素を計算し、あなたの寝室の「得点」を算出します。</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="snowflake"></i>
+                <h3>エアコン運用の最適解</h3>
+                <p>「28℃設定」は本当に正しいのか？外気温や湿度に合わせた、2026年最新のエアコン設定を提案します。</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="layout"></i>
+                <h3>住環境の改善ガイド</h3>
+                <p>サーキュレーターの配置から寝具の選び方まで。物理法則に基づいた改善アクションを提示します。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-nav-grid">
+                    <a href="../thermal/index.html">🌡️ 温度・湿度</a>
+                    <a href="../bedding/index.html">🛏️ 寝具・身体</a>
+                    <a href="../housing/index.html">🏠 住宅・遮熱</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 熟睡ベンチマーク</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
